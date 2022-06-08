@@ -1,0 +1,814 @@
+@font-face {
+    font-family: myMontserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: myMontserratBold;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: myMontserratBlack;
+    src: url(../fonts/Montserrat-Black.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    position: relative;
+    
+    top: 10px;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline;
+    margin-left: 30px;
+    font-family: myMontserratBold;
+    font-size: 15px;
+}
+
+nav a{
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #79BAAB;
+    text-decoration: none;
+}
+
+.selected{
+    font-family: myMontserratBlack;
+    border-bottom: 3px dashed;
+}
+
+main{
+    background-color: #FFF7E8;
+    margin-bottom: 0;
+}
+
+.highlighted{
+    background-image: url("../img/knife-bg.jpg");
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.highlighted>h2{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    font-family: myMontserratBlack;
+    font-size: 50px;
+    color: #2A2A2A;
+}
+
+.highlighted>.search{
+    margin-top: 30px;    
+}
+
+.search{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #79BAAB;
+}
+
+.search>*{
+    margin-left: 10px;
+}
+
+.search>p{
+    font-family: myMontserrat;
+    font-size: 14px;
+    color: #2A2A2A;
+}
+
+h1{
+    font-family: myMontserratBlack;
+    margin: 30px auto;
+    color: #2A2A2A ;
+    text-align: center;
+    font-size: 30px;    
+    position: relative;
+}
+
+h1:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #2A2A2A ;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+h1:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #2A2A2A ;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.meals ul{
+    display:grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+}
+
+.meals p{
+    margin-top: 3px;
+    font-family: myMontserratBlack;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.meals img{
+    width: 100%;        
+}
+
+.shop{  
+    margin: 40px auto;
+    background-image: url("../img/shop-bg.jpg");
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.shop>div{
+    background-color: white;
+    margin: 40px 200px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.shop h1{
+    max-width: 320px;
+    margin-bottom: 20px;
+}
+
+.shop h1:before, .shop h1:after{
+    width: 100px;
+}
+
+.shop p{
+    margin: auto;
+    text-align: center;
+    width: 450px;
+    margin-top: 10px;
+    font-family: myMontserrat;
+    color: #2A2A2A;
+    font-size: 15px;
+}
+
+.shop a{
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+    font-family: myMontserratBold;
+    color: #DC4A23;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.shop a:hover{
+    color: #EB9781;
+    text-decoration: none;
+}
+
+.weekpick{
+    display: grid;    
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+.weekpick img{
+    width: 100%;
+}
+
+.weekpick h4{
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-family: myMontserrat;
+    color: #2A2A2A;
+    font-size: 12px;
+}
+
+.weekpick h1{
+    margin: 0;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.weekpick p{
+    margin-top: 5px;
+    color: #2A2A2A;
+    margin-right: 50px;
+    font-family: myMontserrat;
+    font-size: 15px;
+}
+
+.weekpick a{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #79BAAB;
+    text-decoration: none;    
+}
+
+.weekpick a>p{
+    margin: auto;
+    text-align: center;
+    color: #79BAAB;
+    
+}
+
+.weekpick a:hover{
+    background-color: #79BAAB;
+}
+
+.weekpick a:hover>p{
+    color: white;
+}
+
+.newsletter{    
+    margin-top: 20px;  
+    background-color: #79BAAB;
+}
+
+.newsletter>div {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: block;
+    position: relative;
+}
+  
+.newsletter>div::after {
+    content: "";
+    background-image: url('../img/doodle.png');
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;  
+}
+
+.newsletter p, .newsletter a{
+    margin: auto;
+    text-align: center;
+    width: 450px;
+    margin-top: 10px;
+    font-family: myMontserrat;
+    font-size: 20px;
+}
+
+.suscribe{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 350px;
+    margin: auto;
+}
+
+.suscribe>p{
+    background-color: white;
+    color: #2A2A2A;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 5px;
+    width: 230px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+    font-size: 14px;
+}
+
+.suscribe>a{
+    background-color: #DC4A23;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.suscribe>a:hover{
+    background-color: #EB9781;
+}
+
+footer{
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+footer p, .follow{
+    color: white;
+}
+
+footer p{
+    margin-left: 0;
+}
+
+.follow{
+    margin-right: 0;   
+}
+
+footer li{
+    display: inline;
+    font-family: myMontserrat;
+    font-size: 15px;
+
+}
+
+footer img{
+    width: 20px;
+}
+
+.foot-one p{
+    font-family: myMontserratBold;
+}
+
+.foot-one{
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.foot-one a{
+    color: white;
+    opacity: 1;
+}
+
+.foot-one a:hover{
+    opacity: 0.7;
+}
+
+.foot-two{
+    margin-bottom: 50px;
+}
+
+.foot-two p{
+    font-family: myMontserrat;
+    font-size: 12px;
+}
+
+.foot-two a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.foot-two a:hover{
+    color: #79BAAB;
+}
+
+.content h1:not(.newsletter h1){
+    padding-top: 20px;
+}
+
+.content p:not(.newsletter p, .products p, .videos p){
+    font-family: myMontserrat;
+    margin: auto;
+}
+
+.recipes-page, .shop-page{
+    width: 920px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex; 
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filter, .products{
+    
+    vertical-align:top;
+}
+
+.filter{
+    margin-top: 0;
+    background-color: white;
+    width: 300px;
+}
+
+.filter>*{
+    margin-left: 15px;
+}
+
+.filter>h3{
+    font-family: myMontserratBlack;
+    color: #2A2A2A;
+    margin-top: 15px;
+}
+
+.filter li{
+    margin-top: 5px;
+    font-family: myMontserrat;
+    font-size: 14px;
+}
+
+.filter .search{
+    width: 240px;
+}
+
+.filter .search>p{
+    margin-left: 10px;
+}
+
+.products {
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 620px;
+}
+
+.products li{
+    width: 100%
+}
+
+.products p{
+    margin-top: 3px;
+    font-family: myMontserratBlack;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.products img{
+    width: 100%;       
+}
+
+.pages{
+    margin-top: 10px;
+    width: 620px;
+    margin: auto;
+    text-align: center;
+}
+
+.pages li{
+    display: inline;
+    margin-left: 5px;
+    font-family: myMontserratBold;
+    font-size: 12px;
+}
+
+.pages a{
+    color: #79BAAB;
+    text-decoration: none;
+}
+
+.pages a:hover{
+    color: #C5E1DB;
+}
+
+.videos-page{
+    margin-top: 25px;
+}
+
+.videos p{
+    margin-top: 3px;
+    font-family: myMontserrat;
+    font-size: 14px;
+    width: 90%;
+    margin-left: 10px;
+    
+}
+
+.videos li{
+    width: 100%;
+    margin-top: 0;
+    background-color: white;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+.videos iframe{
+    margin-bottom: 0px;
+    width: 100%; 
+    height: 250px;
+}
+
+.videos .title{
+    margin-top: 0px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-family: myMontserratBlack;
+}
+
+@media (min-width: 1024px) {
+    header{
+        justify-content: space-between;
+    }
+        
+    header img{
+        margin-left: 300px;
+        width: 270px;
+    }
+
+    nav ul{
+        margin-right: 300px;
+        margin-top: 20px;
+    }
+    
+    .meals>h1{
+        max-width: 920px;
+    }
+
+    .meals>h1:before, .meals>h1:after{
+        width: 330px;
+    }
+
+    .meals ul {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+        max-width: 920px;
+        align-items: center;
+        margin: auto;
+    }    
+
+    .shop{  
+        width: 920px;
+    }
+
+    .shop>div{
+        margin: 40px 200px;
+    }
+
+    .shop p{
+        width: 450px;
+    }
+
+    .weekpick{
+        grid-column-gap: 20px;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, 1fr);
+        width: 920px;      
+    }
+
+    footer>div{
+        margin: auto;
+        margin-bottom: 10px;
+        width: 920px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p, .follow{
+        margin: auto;
+    }
+
+    footer p{
+        text-align: left;
+        margin-left: 0;
+        width: 270px;
+    }
+
+    footer li{
+        margin-left: 10px;
+    }
+
+    .follow{
+        margin-right: 0;
+    }
+
+    .follow p, .follow ul{
+        display: inline;
+        margin-left: 30px;       
+    }
+
+    .content h1:not(.newsletter h1){
+        text-align: left;
+        width: 920px;
+    }
+
+    .content p:not(.newsletter p, .products p, .videos p){
+        width: 920px;
+        text-align: left;
+    }
+
+    .products {
+        display: grid;
+        grid-auto-flow: row;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+        padding: 0;
+        width: 620px;
+        margin-bottom: 15px;
+    }
+
+    .recipes-page .products{
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .recipes-page .filter{
+        height: 950px;
+    }
+
+    .pages{
+        width: 620px;
+    }
+
+    .shop-page .products{
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .shop-page .filter{
+        height: 760px;
+    }
+
+    .products li{
+        width: 190px;
+    }
+
+    .videos{
+        display: grid;
+        grid-auto-flow: row;
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: auto;
+        max-width: 920px;
+        margin-bottom: 15px;
+        padding-bottom: 40px;
+    }
+
+    .videos li{
+        width: 450px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 450px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img{
+        width: 180px;
+    }
+
+    nav ul{    
+        margin-top: 10px;
+    }
+    
+    .meals>h1{
+        max-width: 450px;
+    }
+
+    .meals>h1:before, .meals>h1:after{
+        width: 90px;
+    }
+
+    .meals ul {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 0;
+        max-width: 450px;
+        align-items: center;
+        margin: auto;
+    }
+
+    .shop{  
+        margin: 40px auto;
+        width: 450px;
+        background-image: url("../img/shop-bg.jpg");
+        background-size: cover;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .shop>div{
+        margin: 40px 20px;
+    }
+
+    .shop p{
+        width: 350px;
+    }
+
+    .weekpick{
+        grid-column-gap: 20px;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+        width: 900px;
+        margin-left: 20px;       
+    }
+
+    footer>div{
+        margin: auto;
+        margin-bottom: 10px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p{
+        text-align: center;
+        margin-left: 0;
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .follow p{
+        font-family: myMontserrat;
+        font-size: 14px;
+    }
+
+    footer ul{
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer li{
+        margin: 0 10px;
+    }
+
+    .content h1:not(.newsletter h1){
+        text-align: center;
+        width: 450px;
+    }
+
+    .content p:not(.newsletter p, .products p, .videos p){
+        width: 450px;
+        text-align: center;
+    }
+
+    .filter{
+        display: none;
+    }
+
+    .products {
+        display: grid;
+        grid-auto-flow: row;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        padding: 0;
+        width: 450px;
+        margin-bottom: 15px;
+        margin-left: 20px;
+    }
+
+    .recipes-page .products{
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .pages{
+        width: 450px;
+    }
+
+    .videos{
+        display: grid;
+        grid-auto-flow: row;
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+        max-width: 450px;
+        margin-bottom: 15px;
+        padding-bottom: 40px;
+    }
+}
